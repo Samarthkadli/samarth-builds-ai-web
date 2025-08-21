@@ -9,11 +9,8 @@ export function Hero() {
   }
 
   const downloadResume = () => {
-    // Create a link to the resume PDF
-    const link = document.createElement('a')
-    link.href = '/resume/Samarth-Kadli-Resume.pdf'
-    link.download = 'Samarth-Kadli-Resume.pdf'
-    link.click()
+    // Open Google Drive resume link
+    window.open('https://drive.google.com/uc?export=download&id=1ATjsmdbk_B57fpy06PZcub7MiZSVjp2s', '_blank')
   }
 
   return (
