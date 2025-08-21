@@ -21,25 +21,44 @@ export function Contact() {
     })
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     
-    // Create mailto link
-    const subject = `Portfolio Contact from ${formData.name}`
-    const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-    const mailtoLink = `mailto:kadlisamarth@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
-    
-    // Open email client
-    window.location.href = mailtoLink
-    
-    // Reset form
-    setFormData({ name: '', email: '', message: '' })
-    
-    // Show success toast
-    toast({
-      title: "Email client opened!",
-      description: "Your default email client should open with the pre-filled message.",
-    })
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: 'f0a9966c-36ec-450c-b139-99df51fadc19',
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          subject: `Portfolio Contact from ${formData.name}`,
+        }),
+      })
+
+      if (response.ok) {
+        // Reset form
+        setFormData({ name: '', email: '', message: '' })
+        
+        // Show success toast
+        toast({
+          title: "Message sent successfully!",
+          description: "Thank you for reaching out. I'll get back to you soon.",
+        })
+      } else {
+        throw new Error('Failed to send message')
+      }
+    } catch (error) {
+      console.error('Error sending message:', error)
+      toast({
+        title: "Failed to send message",
+        description: "Please try again or contact me directly via email.",
+        variant: "destructive",
+      })
+    }
   }
 
   const contactInfo = [
