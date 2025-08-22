@@ -10,7 +10,7 @@ export function Hero() {
 
   const downloadResume = () => {
     // Open Google Drive resume link
-    window.open('https://drive.google.com/uc?export=download&id=1ATjsmdbk_B57fpy06PZcub7MiZSVjp2s', '_blank')
+    window.open('https://drive.google.com/uc?export=download&id=1k87d-uft8N8B__q7j5SZNvGiu3kroM4s', '_blank')
   }
 
   return (
