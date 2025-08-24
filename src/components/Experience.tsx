@@ -38,7 +38,7 @@ const timelineItems: TimelineItem[] = [
   },
   {
     title: "Pre-University Education",
-    organization: "Sri Sharada PU College, Gangavathi",
+    organization: "Sri Sharada PU College, Koppal",
     period: "2020 – 2022",
     description: "Completed pre-university education with focus on science and mathematics foundation.",
     details: ["Score: 66%", "Science stream with Mathematics"],
