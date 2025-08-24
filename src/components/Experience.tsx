@@ -62,10 +62,10 @@ const achievements = [
 ]
 
 const certifications = [
-  "Python Internship Certificate — EZTS",
-  "Simulink Onramp — MATLAB",
-  "Google Cloud Generative AI Course",
-  "HACKB-24 Hackathon Participation (2024)"
+  { name: "Python Internship Certificate — EZTS", link: null },
+  { name: "Simulink Onramp — MATLAB", link: "https://drive.google.com/file/d/1RjeTtH33Wkm-8rm3eAurtD3IhvVHdHOv/view?usp=sharing" },
+  { name: "Google Cloud Generative AI Course", link: "https://drive.google.com/file/d/17mYGktmZXp6zxKOgNFmE7cniyctNi4Ux/view?usp=sharing" },
+  { name: "HACKB-24 Hackathon Participation (2024)", link: null }
 ]
 
 function getIcon(type: string) {
@@ -196,13 +196,30 @@ export function Experience() {
             <CardContent>
               <div className="space-y-3">
                 {certifications.map((cert, index) => (
-                  <Badge 
-                    key={index} 
-                    variant="secondary" 
-                    className="block text-left p-3 h-auto bg-muted/30 hover:bg-muted/50 transition-colors text-xs font-medium"
-                  >
-                    {cert}
-                  </Badge>
+                  cert.link ? (
+                    <a 
+                      key={index}
+                      href={cert.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block"
+                    >
+                      <Badge 
+                        variant="secondary" 
+                        className="block text-left p-3 h-auto bg-muted/30 hover:bg-primary/10 hover:text-primary transition-colors text-xs font-medium cursor-pointer"
+                      >
+                        {cert.name}
+                      </Badge>
+                    </a>
+                  ) : (
+                    <Badge 
+                      key={index} 
+                      variant="secondary" 
+                      className="block text-left p-3 h-auto bg-muted/30 hover:bg-muted/50 transition-colors text-xs font-medium"
+                    >
+                      {cert.name}
+                    </Badge>
+                  )
                 ))}
               </div>
             </CardContent>
