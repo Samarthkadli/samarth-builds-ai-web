@@ -62,10 +62,10 @@ const achievements = [
 ]
 
 const certifications = [
-  { name: "Python Internship Certificate — EZTS", link: null },
+  { name: "Python Internship Certificate — EZTS", link: "https://drive.google.com/file/d/199spuVcRZ88rA3umcpG4pyBztt5Hluxw/view?usp=sharing" },
   { name: "Simulink Onramp — MATLAB", link: "https://drive.google.com/file/d/1RjeTtH33Wkm-8rm3eAurtD3IhvVHdHOv/view?usp=sharing" },
   { name: "Google Cloud Generative AI Course", link: "https://drive.google.com/file/d/17mYGktmZXp6zxKOgNFmE7cniyctNi4Ux/view?usp=sharing" },
-  { name: "HACKB-24 Hackathon Participation (2024)", link: null }
+  { name: "HACKB-24 Hackathon Participation (2024)", link: "https://drive.google.com/file/d/19QCNtSfpe2LCVNd57-JFVZREFtu8ALVn/view?usp=sharing" }
 ]
 
 function getIcon(type: string) {
