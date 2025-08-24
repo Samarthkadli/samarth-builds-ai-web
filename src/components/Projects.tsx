@@ -25,7 +25,7 @@ const projects: Project[] = [
       "Billing and record management"
     ],
     icon: Database,
-    github: "https://github.com/Samarthkadli"
+    github: "https://github.com/Samarthkadli/PHP-project"
   },
   {
     title: "Fake News Detection System",
@@ -38,7 +38,7 @@ const projects: Project[] = [
       "Real-time news analysis"
     ],
     icon: Shield,
-    github: "https://github.com/Samarthkadli"
+    github: "https://github.com/Samarthkadli/ML_project123"
   }
 ]
 
