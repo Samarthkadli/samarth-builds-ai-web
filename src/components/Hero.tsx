@@ -15,13 +15,14 @@ export function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Overlay */}
+      {/* Animated Background with Gradient Shift */}
       <div className="absolute inset-0 z-0">
         <img 
           src={heroBg} 
           alt="Professional workspace" 
           className="w-full h-full object-cover opacity-20 dark:opacity-10"
         />
+        <div className="absolute inset-0 bg-gradient-shift animate-gradient-shift" />
         <div className="absolute inset-0 bg-gradient-to-br from-background/90 via-background/95 to-background/90" />
       </div>
       
