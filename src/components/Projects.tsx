@@ -1,4 +1,4 @@
-import { Database, Shield, Github, ExternalLink } from "lucide-react"
+import { Database, Shield, Heart, Github, ExternalLink } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -39,6 +39,21 @@ const projects: Project[] = [
     ],
     icon: Shield,
     github: "https://github.com/Samarthkadli/ML_project123"
+  },
+  {
+    title: "Medicine Reminder Android App",
+    description: "A caring Android app that reminds you to take your medicines on time, because health deserves love and attention.",
+    technologies: ["Android Studio", "Java/Kotlin", "Room Database", "RecyclerView", "AlarmManager", "Notification Manager"],
+    features: [
+      "User Authentication - Register & login system",
+      "Medicine Management - Add, edit, and delete medicines",
+      "Smart Reminders - Timely alerts for every dose",
+      "Schedule View - Daily & weekly medicine schedules",
+      "Offline Support - Stores data locally using RoomDB",
+      "User-Friendly UI - Card-based clean interface"
+    ],
+    icon: Heart,
+    github: "https://github.com/Samarthkadli/Medicine-Reminder-Android-App"
   }
 ]
 
